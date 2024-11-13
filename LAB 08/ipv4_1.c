@@ -26,18 +26,18 @@ int main() {
     char *ptr = strtok(ip, ".");
 
     while (ptr != NULL) {
-        // for (int i = 0; i < (int)strlen(ptr); i++) {
-        //     if (!isdigit(ptr[i])) {  
-        //         printf("The IP address is not valid.\n");
-        //         return 0;
-        //     }
-        // }
-        for (size_t i = 0; i < strlen(ptr); i++) {
+        for (int i = 0; i < (int)strlen(ptr); i++) {
             if (!isdigit(ptr[i])) {  
                 printf("The IP address is not valid.\n");
                 return 0;
             }
         }
+        // for (size_t i = 0; i < strlen(ptr); i++) {
+        //     if (!isdigit(ptr[i])) {  
+        //         printf("The IP address is not valid.\n");
+        //         return 0;
+        //     }
+        // }
 
         num = atoi(ptr);
         if (num < 0 || num > 255) {  
